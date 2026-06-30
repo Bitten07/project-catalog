@@ -1,17 +1,88 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
+:root {
+    --fundoMain: #101BFC;
+    --fundoSec: #FCCD0F;
+    --corpoMain: #0F98FC;
+    --corpoSec: #FCFC0F;
+    --pontoMain: #4247A7;
+    --fontMain: Helvetica;
 }
 
-.header{
-    background-color: aqua;
-    width: 100%;
-    height: 8vh;
+body {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2%;
+}
+
+.logo-catalog {
+    height: 100%;
 }
 
 .main {
+    padding: 20px;
+    grid-column: 2/6;
     height: 100vh;
-    width: 100vw;
-    background-color: green;
+    width: 96%;
+    background-color: var(--fundoMain);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: var(--fontMain);
+}
+
+.aside {
+    padding: 10px;
+    height: 100vh;
+    width: 96%;
+    grid-column: 1 / 2;
+    background-color: var(--fundoSec);
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    height: 50%;
+    width: 100%;
+    background-color: var(--corpoSec);
+    font-family: var(--fontMain);
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+    background-color: var(--pontoMain);
+    display: flex;
+    flex-direction: row;
+}
+
+
+.section {
+    height: 30%;
+    width: 100%;
+    background-color: var(--corpoMain);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.article {
+    width: auto;
+    background-color: var(--pontoMain);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.games-cover {
+    width: 120px;
+    height: 170px;
 }
