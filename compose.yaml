@@ -1,0 +1,6 @@
+services:
+  catalog:
+    container_name: catalog
+    build: .
+    ports:
+      - "3030:80"
